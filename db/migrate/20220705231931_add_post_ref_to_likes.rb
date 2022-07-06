@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 # Add Post ref to likes
 class AddPostRefToLikes < ActiveRecord::Migration[7.0]
   def change
