@@ -7,6 +7,9 @@ AllCops:
 
   DisplayCopNames: true
 
+AllCops:
+ RunRailsCops: true
+
 Layout/LineLength:
   Max: 120
 Metrics/MethodLength:
@@ -30,7 +33,7 @@ Style/AndOr:
 Style/DefWithParentheses:
   Enabled: false
 Style/FrozenStringLiteralComment:
-  EnforcedStyle: never
+  EnforcedStyle: false
 
 Layout/HashAlignment:
   EnforcedColonStyle: key
