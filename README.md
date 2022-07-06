@@ -1,24 +1,59 @@
-# README
+# Blog App
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+> This is a Blog app, for now the only the schema, tables and relations are created
 
-Things you may want to cover:
+## Built With
 
-* Ruby version
+- _**Ruby**_
+- _**Rails**_
+- _**PostgreSQL**_
 
-* System dependencies
+## Getting Started
 
-* Configuration
+### Clone this repository
 
-* Database creation
+```bash
+$ git clone git@github.com:Sahar-AbdelSamad/Blog-App.git
+$ cd Blog-App
+```
 
-* Database initialization
+### Install gems
 
-* How to run the test suite
+```bash
+$ bundle install
+```
 
-* Services (job queues, cache servers, search engines, etc.)
+### Setup database
 
-* Deployment instructions
+```bash
+$ rails db:create
+```
 
-* ...
+### Start server
+
+```bash
+$ rails s
+```
+
+Open http://localhost:3000/ in your browser
+
+### Run tests
+
+```bash
+$ bundle exec rspec
+```
+
+## Authors
+
+👤 **Sediqullah Badakhsh**
+
+- GitHub: [@sediqullahbadakhsh](https://github.com/sediqullahbadakhsh)
+- LinkedIn: [@sediqullah](https://www.linkedin.com/in/sediqullah/)
+
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome!
+
+## Show your support
+
+Give a ⭐️ if you like this project!
