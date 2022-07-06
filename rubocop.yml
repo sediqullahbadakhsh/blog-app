@@ -33,7 +33,7 @@ Style/AndOr:
 Style/DefWithParentheses:
   Enabled: false
 Style/FrozenStringLiteralComment:
-  EnforcedStyle: false
+  EnforcedStyle: true
 
 Layout/HashAlignment:
   EnforcedColonStyle: key
