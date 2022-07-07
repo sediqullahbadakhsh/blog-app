@@ -10,7 +10,6 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-# rubocop:disable Metrics/BlockLength
 ActiveRecord::Schema[7.0].define(version: 2022_07_07_111000) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -60,4 +59,3 @@ ActiveRecord::Schema[7.0].define(version: 2022_07_07_111000) do
   add_foreign_key "likes", "users", column: "author_id", on_delete: :cascade
   add_foreign_key "posts", "users", column: "author_id", on_delete: :cascade
 end
-# rubocop:enable Metrics/BlockLength
