@@ -72,3 +72,9 @@ group :test do
 end
 # Rubocop version
 gem 'rubocop', '>= 1.0', '< 2.0'
+# RSpec-Rails
+group :development, :test do
+  gem 'rspec-rails'
+end
+# ffi
+gem 'ffi'
