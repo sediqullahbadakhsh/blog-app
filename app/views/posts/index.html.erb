@@ -1,0 +1,20 @@
+<ul>
+    <%= image_tag @user.photo %>
+    <%= @user.name %>
+    <%= @user.posts_counter %>
+</ul>
+<% @post.each do |p| %>
+    <ul>
+        <%= p.title%>
+        <%= p.text%>
+        <%= p.comments_counter%>
+        <%= p.likes_counter%>
+            <% @comment.each do |c|%>
+                <ul>
+                    <% @user.name%>
+                    <% c.text%>
+                </ul>
+            <%end%>
+    </ul>
+<%end%>
+           
