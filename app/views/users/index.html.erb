@@ -1,0 +1,10 @@
+<div>Index </div>
+
+<% @user.each do |p| %>
+<ul>
+    <%= image_tag p.photo %>
+    <%= p.name %>
+    <%= p.posts_counter %>
+    
+</ul>
+<%end%>
