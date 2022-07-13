@@ -1,0 +1,17 @@
+<h1>Show page</h1>
+
+<ul>
+    <%= image_tag @user.photo %>
+    <%= @user.name %>
+    <%= @user.posts_counter %>
+    <%= @user.bio %>
+</ul>
+<% @post.each do |p| %>
+    <ul>
+        <%= p.title%>
+        <%= p.author_id%>
+        <%= p.text%>
+        <%= p.comments_counter%>
+        <%= p.likes_counter%>
+    </ul>
+<%end%>

@@ -1,0 +1,9 @@
+<ul>
+    <%= @post.title %>
+    <%= @post.comments_counter %>
+    <%= @post.likes_counter %>
+    <%= @post.text %>
+</ul>
+<% @comment.each do |c|%>
+    <%= c.text%>
+<%end%>
