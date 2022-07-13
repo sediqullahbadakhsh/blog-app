@@ -78,3 +78,5 @@ group :development, :test do
 end
 # ffi
 gem 'ffi'
+# assert_template controller testing
+gem 'rails-controller-testing'
