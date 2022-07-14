@@ -16,7 +16,7 @@
 }
 .intro-details {
   height: 100px;
-  width: 80%;
+  width: 85%;
   border: solid 1px black;
   display: flex;
   flex-direction: column;
@@ -34,3 +34,22 @@
 }
 
 /* users show style */
+.bio {
+  padding: 0 5px;
+  border: solid 1px black;
+}
+.post-row {
+  display: flex;
+  flex-direction: column;
+  border: solid 1px black;
+  padding: 0 5px;
+}
+.post-title {
+  font-weight: 600;
+}
+.post-text {
+  padding-left: 20px;
+}
+.counters {
+  align-self: end;
+}
