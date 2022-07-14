@@ -1,4 +1,4 @@
-/* user index style */
+/* post index style */
 .container {
   padding: 20px 40px;
   display: flex;
@@ -33,11 +33,7 @@
   top: 60%;
 }
 
-/* user show style */
-.bio {
-  padding: 0 5px;
-  border: solid 1px black;
-}
+/* post show style */
 .post-row {
   display: flex;
   flex-direction: column;
@@ -52,4 +48,7 @@
 }
 .counters {
   align-self: end;
+}
+.comment-section {
+  border: 1px solid black;
 }
