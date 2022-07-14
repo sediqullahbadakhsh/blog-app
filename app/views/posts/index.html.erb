@@ -9,7 +9,9 @@
         <%= p.text%>
         <%= p.comments_counter%>
         <%= p.likes_counter%>
-    
+        <% p.most_recent_comments.each do |c|%>
+          <%= c.user.name + ": " + c.text%>
+        <% end %>
     </ul>
 <%end%>
            
