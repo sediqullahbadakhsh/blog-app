@@ -1,11 +1,11 @@
-<h1>Show page</h1>
-
-<ul>
+<div class = "container">
+<div class = "user-row">
     <%= image_tag @user.photo %>
+
     <%= @user.name %>
     <%= @user.posts_counter %>
     <%= @user.bio %>
-</ul>
+</div>
 <% @post.each do |p| %>
     <ul>
         <%= p.title%>
@@ -14,4 +14,17 @@
         <%= p.comments_counter%>
         <%= p.likes_counter%>
     </ul>
+<%end%>
+</div>
+
+<% @user.each do |p| %>
+
+    <div class = "photo">
+        <%= image_tag p.photo %>
+    </div>
+    <div class = "intro-details">
+       <p class = "user-name"> <%= p.name  %> </p>
+       <p class = "post-counter">Number of posts:  <%= p.posts_counter %> </p>
+    </div>    
+</div>
 <%end%>
