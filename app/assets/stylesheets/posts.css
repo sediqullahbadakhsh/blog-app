@@ -32,7 +32,9 @@
   align-self: end;
   top: 60%;
 }
-
+.pagination {
+  text-align: center;
+}
 /* post show style */
 .post-row {
   display: flex;
@@ -40,15 +42,19 @@
   border: solid 1px black;
   padding: 0 5px;
 }
-.post-title {
-  font-weight: 600;
-}
 .post-text {
   padding-left: 20px;
 }
-.counters {
-  align-self: end;
-}
+
 .comment-section {
   border: 1px solid black;
+  padding: 0 5px;
+}
+.post-container {
+  border: solid 1px black;
+}
+.post-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 5px;
 }
