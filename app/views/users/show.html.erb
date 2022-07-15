@@ -6,6 +6,7 @@
         <div class = "intro-details">
             <p class = "user-name"><%= @user.name %></p>
             <p class = "post-counter">Number of posts:<%= @user.posts_counter %></p>
+
         </div>
     </div>
     <div class = "bio">
@@ -16,8 +17,10 @@
         <div class = "post-row">
             <p class ="post-title"> <%= p.title%></p>
             <p class ="post-text"><%= p.text%></p>
+            <p><button> <%= link_to 'View Post', user_post_url(p) %></button> </p>
             <p class="counters"> Comments: <%= p.comments_counter%>,
             Likes: <%= p.likes_counter%></P>
+            
         </div>
     <%end%>
         <p class = "pagination"> Pagination </p>

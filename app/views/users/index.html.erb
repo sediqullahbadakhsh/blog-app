@@ -8,6 +8,7 @@
     <div class = "intro-details">
        <p class = "user-name"> <%= p.name  %> </p>
        <p class = "post-counter">Number of posts:  <%= p.posts_counter %> </p>
+       <p><button> <%= link_to 'View profile', user_path(p) %></button> </p>
     </div>    
 </div>
 <%end%>
