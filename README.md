@@ -1,6 +1,6 @@
 # Blog App
 
-> This is a Blog app, for now the only the schema, tables and relations are created
+> This is a Blog app, where you can signup and create your user, to add posts and comments
 
 ## Built With
 
@@ -57,3 +57,9 @@ Contributions, issues, and feature requests are welcome!
 ## Show your support
 
 Give a ⭐️ if you like this project!
+
+## Acknowledgments
+
+- Hat tip to anyone whose code was used
+- Inspiration
+- etc
