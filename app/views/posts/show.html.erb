@@ -26,4 +26,10 @@
         <%= f.text_area :comment, placeholder: 'Comment' %><br>
         <%= f.submit "Comment" %>
     <% end %>
+
+    <%= form_with url: user_like_path(@user, @post), method: :post do |f| %>
+        <%= f.hidden_field :user_id, value: @user.id %>
+        <%= f.hidden_field :post_id, value: @post.id %>
+        <%= f.submit "Like" %>
+    <% end %>
 </div>
