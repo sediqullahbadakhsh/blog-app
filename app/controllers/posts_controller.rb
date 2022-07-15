@@ -7,16 +7,26 @@ class PostsController < ApplicationController
   def show
     @post = Post.find(params[:id])
     @comment = Comment.where(post_id: @post.id).order(created_at: :desc)
-    @user = User.find(params[:id])
   end
 
   def new
-    @user = current_user
     @post = Post.new
+  end
+
+  def create
+    @post = current_user.posts.new(post_params)
     respond_to do |format|
-      format.html {render :new, locals: {post: @post}}
+      if @post.save
+        format.html { redirect_to user_posts_path }
+      else
+        format.html { render :new }
+      end
     end
   end
 
-  
+  private
+
+  def post_params
+    params.require(:post).permit(:title, :text)
+  end
 end
