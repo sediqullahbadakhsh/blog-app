@@ -23,6 +23,7 @@ class PostsController < ApplicationController
       end
     end
   end
+
   def comment
     @post = Post.find(params[:id])
     @comment = Comment.new(author_id: current_user.id, post_id: @post.id, text: params[:comment])
@@ -32,7 +33,7 @@ class PostsController < ApplicationController
       render :show, alert: 'Error occured!'
     end
   end
-  
+
   def like
     @post = Post.find(params[:id])
     Like.new(author_id: current_user.id, post_id: @post.id).save
