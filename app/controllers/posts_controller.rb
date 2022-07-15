@@ -23,6 +23,15 @@ class PostsController < ApplicationController
       end
     end
   end
+  def comment
+    @post = Post.find(params[:id])
+    @comment = Comment.new(author_id: current_user.id, post_id: @post.id, text: params[:comment])
+    if @comment.save
+      redirect_to user_post_path(current_user)
+    else
+      render :show, alert: 'Error occured!'
+    end
+  end
 
   private
 
