@@ -14,30 +14,14 @@ class PostsController < ApplicationController
   end
 
   def create
-    @post = current_user.posts.new(post_params)
+    @post = Post.new(post_params)
     respond_to do |format|
       if @post.save
-        format.html { redirect_to user_posts_path }
+        format.html { redirect_to user_post_path }
       else
         format.html { render :new }
       end
     end
-  end
-
-  def comment
-    @post = Post.find(params[:id])
-    @comment = Comment.new(author_id: current_user.id, post_id: @post.id, text: params[:comment])
-    if @comment.save
-      redirect_to user_post_path(current_user)
-    else
-      render :show, alert: 'Error occured!'
-    end
-  end
-
-  def like
-    @post = Post.find(params[:id])
-    Like.new(author_id: current_user.id, post_id: @post.id).save
-    redirect_to user_post_path(current_user)
   end
 
   private
