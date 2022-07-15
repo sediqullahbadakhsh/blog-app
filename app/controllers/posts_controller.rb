@@ -7,5 +7,16 @@ class PostsController < ApplicationController
   def show
     @post = Post.find(params[:id])
     @comment = Comment.where(post_id: @post.id).order(created_at: :desc)
+    @user = User.find(params[:id])
   end
+
+  def new
+    @user = current_user
+    @post = Post.new
+    respond_to do |format|
+      format.html {render :new, locals: {post: @post}}
+    end
+  end
+
+  
 end
