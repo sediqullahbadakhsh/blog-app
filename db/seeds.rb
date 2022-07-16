@@ -4,11 +4,11 @@ User.create!({
              })
 
 Post.create!({
-               { author_id: 1, title: 'how to draw', text: 'how to draw a someones face' },
-               { author_id: 2, title: 'A simple article', text: "I don't know what I am writing" }
+               { user_id: 1, title: 'how to draw', text: 'how to draw a someones face' },
+               { user_id: 2, title: 'A simple article', text: "I don't know what I am writing" }
              ])
 
 Comment.create!([
-                  { author_id: 1, post_id: 1, text: 'Really nice' },
-                  { author_id: 1, post_id: 1, text: 'Me niether' }
+                  { user_id: 1, post_id: 1, text: 'Really nice' },
+                  { user_id: 1, post_id: 1, text: 'Me niether' }
                 ])

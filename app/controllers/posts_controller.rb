@@ -1,26 +1,26 @@
 class PostsController < ApplicationController
   def index
+    @posts = Post.all
     @user = User.find(params[:user_id])
-    @post = Post.where(author_id: @user.id).order(created_at: :desc)
   end
 
   def show
-    @post = Post.find(params[:id])
-    @comment = Comment.where(post_id: @post.id).order(created_at: :desc)
+    @post = User.find(params[:user_id]).posts.find(params[:id])
   end
 
   def new
     @post = Post.new
+    @user = current_user
   end
 
   def create
     @post = Post.new(post_params)
-    respond_to do |format|
-      if @post.save
-        format.html { redirect_to user_post_path }
-      else
-        format.html { render :new }
-      end
+    @post.user = current_user
+ 
+    if @post.save
+      redirect_to user_path(current_user)
+    else
+      render 'new'
     end
   end
 

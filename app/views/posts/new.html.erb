@@ -1,5 +1,4 @@
-<%= link_to "back to post",url_for(:back) %>
-<%= form_with model: @post, local:true, data:{turbo: false} do |form| %>
+<%= form_with model: @post, url: user_posts_path(@user) do |form| %>
   <p>
     <%= form.label :title %>
     <%= form.text_field :title %>

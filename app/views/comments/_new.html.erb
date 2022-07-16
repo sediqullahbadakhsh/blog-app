@@ -1,0 +1,9 @@
+<div>
+  <h3>Add new comment</h2>
+
+  <%= form_with url: user_post_comments_path(@post.user_id, @post) do |f| %>
+    <p><%= f.label :text %></p>
+    <p><%= f.text_area :text %></p>
+    <p><%= f.submit %></p>
+  <% end %>
+</div>
