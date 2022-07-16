@@ -45,13 +45,12 @@
   display: flex;
   gap: 10px;
 }
+
 .user-post-footer {
   display: flex;
   justify-content: space-between;
 }
-button {
-  height: 30px;
-}
+
 /* post show style */
 .post-row {
   display: flex;
@@ -79,10 +78,12 @@ button {
   justify-content: space-between;
   padding: 0 5px;
 }
+
 .ind-post-footer {
   display: flex;
   justify-content: space-between;
 }
+
 button {
   margin-top: 10px;
 }

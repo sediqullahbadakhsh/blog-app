@@ -67,16 +67,19 @@
 .post-link {
   text-align: end;
 }
+
 .user-posts-footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
+
 .posts-footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
+
 .user-post-counter {
   position: relative;
   padding-right: 10px;

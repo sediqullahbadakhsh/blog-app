@@ -13,5 +13,4 @@ class CommentsController < ApplicationController
       render 'new'
     end
   end
-
 end
