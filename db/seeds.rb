@@ -1,20 +1,14 @@
-User.create!([
-               { name: 'Tom', photo: 'https://unsplash.com/photos/F_-0BxGuVvo', bio: 'Teacher from Mexico.' },
-               { name: 'Lilly', photo: 'https://unsplash.com/photos/F_-0BxGuVvo', bio: 'Teacher from Poland.' }
-             ])
+User.create!({
+               { name: 'Sara', photo: 'https://unsplash.com/photos/mEZ3PoFGs_k', bio: " simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s," },
+               { name: 'John', photo: 'https://unsplash.com/photos/d1UPkiFd04A', bio: " when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting" }
+             })
 
-Post.create!([
-               { author_id: 1, title: 'Hello', text: 'This is my first post' },
-               { author_id: 2, title: 'Hello2', text: 'This is my 2nd post' },
-               { author_id: 1, title: 'Hello3', text: 'This is my 3rd post' },
-               { author_id: 2, title: 'Hello4', text: 'This is my 4th post' }
+Post.create!({
+               { user_id: 1, title: 'how to draw', text: 'how to draw a someones face' },
+               { user_id: 2, title: 'A simple article', text: "I don't know what I am writing" }
              ])
 
 Comment.create!([
-                  { post_id: 1, author_id: 1, text: 'comment 1' },
-                  { post_id: 1, author_id: 2, text: 'comment 2' },
-                  { post_id: 1, author_id: 1, text: 'comment 3' },
-                  { post_id: 1, author_id: 2, text: 'comment 4' },
-                  { post_id: 1, author_id: 1, text: 'comment 5' },
-                  { post_id: 1, author_id: 1, text: 'comment 6' }
+                  { user_id: 1, post_id: 1, text: 'Really nice' },
+                  { user_id: 1, post_id: 1, text: 'Me niether' }
                 ])
