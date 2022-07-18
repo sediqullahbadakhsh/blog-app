@@ -80,3 +80,6 @@ end
 gem 'ffi'
 # assert_template controller testing
 gem 'rails-controller-testing'
+
+# eager loading with Bullet
+gem 'bullet', group: 'development'
