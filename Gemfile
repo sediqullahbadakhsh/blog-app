@@ -74,12 +74,21 @@ end
 gem 'rubocop', '>= 1.0', '< 2.0'
 # RSpec-Rails
 group :development, :test do
+  gem 'database_cleaner'
   gem 'rspec-rails'
 end
+
+# Capybara
+group :test do
+  gem 'capybara'
+  gem 'selenium-webdriver'
+end
+
 # ffi
 gem 'ffi'
 # assert_template controller testing
 gem 'rails-controller-testing'
 
 # eager loading with Bullet
-gem 'bullet', group: 'development'
+gem 'bullet'
+
