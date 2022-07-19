@@ -69,8 +69,8 @@ gem 'rubocop', '>= 1.0', '< 2.0'
 # RSpec-Rails
 group :development, :test do
   gem 'database_cleaner'
-  gem 'rspec-rails'
   gem 'capybara'
+  gem 'rspec-rails'
   gem 'selenium-webdriver'
 end
 

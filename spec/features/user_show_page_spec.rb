@@ -72,7 +72,7 @@ RSpec.describe 'User show page test', type: :feature do
 
   it 'I can see a button that lets me view all of a user\'s posts.' do
     user = User.create(name: 'Sediq', photo: 'https://unsplash.com/6519861_z.jpg', bio: 'A teacher')
-    post = Post.create(title: 'My first post', text: 'This is my first post', user_id: user.id)
+    post = Post.create(user_id: user.id, title: 'My first post', text: 'This is my first post')
 
     visit "/users/#{user.id}"
     expect(page).to have_button('See all posts')
