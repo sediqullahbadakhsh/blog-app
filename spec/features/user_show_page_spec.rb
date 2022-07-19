@@ -53,13 +53,11 @@ RSpec.describe 'User show page test', type: :feature do
   end
 
   it 'When I click a user\'s post, it redirects me to that post\'s show page.' do
-    
     visit "/users/#{@user.id}/posts"
     expect(page).to have_button('view post')
   end
 
   it 'I can see a button that lets me view all of a user\'s posts.' do
-
     visit "/users/#{@user.id}"
     expect(page).to have_button('See all posts')
   end
