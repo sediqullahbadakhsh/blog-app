@@ -23,8 +23,8 @@ RSpec.describe 'Post index page', type: :feature do
     Post.create(title: 'Post2', text: 'Text2', user_id: user.id)
     visit "/users/#{user.id}/posts"
 
-    expect(page).to have_content("Number of posts: #{user.posts.count}")
-    expect(page).to have_content('Number of posts: 2')
+    expect(page).to have_content("Number of posts:#{user.posts.count}")
+    expect(page).to have_content('Number of posts:2')
   end
 
   it 'should show the post\'s title' do
@@ -35,19 +35,6 @@ RSpec.describe 'Post index page', type: :feature do
 
     expect(page).to have_content('Post1')
     expect(page).to have_content('Post2')
-  end
-
-  it 'should show the next two post\'s title' do
-    user = User.create(name: 'John', photo: '', bio: 'Something')
-    Post.create(title: 'Post1', text: 'Text1', user_id: user.id)
-    Post.create(title: 'Post2', text: 'Text2', user_id: user.id)
-    Post.create(title: 'Post3', text: 'Text3', user_id: user.id)
-    Post.create(title: 'Post4', text: 'Text4', user_id: user.id)
-    visit "/users/#{user.id}/posts"
-
-    click_on 'Next'
-    expect(page).to have_content('Post3')
-    expect(page).to have_content('Post4')
   end
 
   it 'should show the post\'s body' do
