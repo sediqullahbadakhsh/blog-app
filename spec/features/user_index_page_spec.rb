@@ -23,7 +23,6 @@ RSpec.describe 'Post index page test', type: :feature do
     Comment.create(user_id: second_user, post_id: post, text: 'Hi Tom!!')
   end
 
-
   it 'I can see the username of all other users.' do
     User.all.each do |user|
       expect(page).to have_content(user.name)

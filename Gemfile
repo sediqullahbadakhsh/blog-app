@@ -92,4 +92,3 @@ gem 'rails-controller-testing'
 
 # eager loading with Bullet
 gem 'bullet'
-
