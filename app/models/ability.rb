@@ -7,11 +7,11 @@ class Ability
     can :read, Post, public: true
 
     return unless user.present?
-    can [:read, :update], Post, user:user
-    can [:read, :update], Comment, user:user
+    can [:read, :create, :update, :destroy], Post, user:user
+    can [:read, :create, :update, :destroy], Comment, user:user
 
     return unless user.admin?
-    can [:read, :update], Post
-    can [:read, :update], Comment
+    can :manage, Post
+    can :manage, Comment
   end
 end
