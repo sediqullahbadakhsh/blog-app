@@ -84,10 +84,6 @@
   justify-content: space-between;
 }
 
-button {
-  margin-top: 10px;
-}
-
 .post-footer {
   display: flex;
   flex-direction: row;

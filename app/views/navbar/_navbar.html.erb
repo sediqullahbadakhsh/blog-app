@@ -1,9 +1,6 @@
-<% if current_user %>
-<p>loged in</p>
-<p> <%= button_to "Sign out", destroy_user_session_path, method: :delete, class:"nav-link" %></p>
-
-<% else %>
-<p> loged out</p>
-<p> <%= link_to "Sign up", new_user_registration_path %></p>
-<p> <%= link_to "Login", new_user_session_path, class:"nav-link" %></p>
-<%end%>
+<div class='header_signout_button'> 
+    <% if current_user %>
+        <%= button_to "Sign out", destroy_user_session_path, method: :delete, class:"nav-link" %>
+        <%= current_user.name%>
+    <%end%>
+</div>
