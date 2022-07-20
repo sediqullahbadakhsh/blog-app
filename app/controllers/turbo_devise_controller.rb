@@ -3,6 +3,7 @@ class TurboDeviseController < ApplicationController
     def to_turbo_stream
       controller.render(options.merge(formats: :html))
     rescue ActionView::MissingTemplate => e
+      # rubocop:disable Style/GuardClause
       if get?
         raise e
       elsif has_errors? && default_action
@@ -10,6 +11,7 @@ class TurboDeviseController < ApplicationController
       else
         redirect_to navigation_location
       end
+      # rubocop:enable Style/GuardClause
     end
   end
 
