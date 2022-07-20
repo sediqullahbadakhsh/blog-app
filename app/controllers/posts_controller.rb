@@ -23,6 +23,21 @@ class PostsController < ApplicationController
       render 'new'
     end
   end
+  
+  def destroy
+    @post = Post.find(params[:post_id])
+    @user = User.find(params[:user_id])
+    @post.destroy
+    redirect_back(fallback_location: root_path)
+  end
+
+  def destroy_comment
+    @post = Post.find(params[:post_id])
+    @user = User.find(params[:user_id])
+    @comment = @post.comments.find(params[:format])
+    @comment.destroy
+    redirect_back(fallback_location: root_path)
+  end
 
   private
 
