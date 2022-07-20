@@ -28,10 +28,10 @@ Devise.setup do |config|
   # Devise will use the `secret_key_base` as its `secret_key`
   # by default. You can change it below and use your own secret key.
   # config.secret_key = '7e3cb1f1ce59cedf095ec37a78ecd81e2479e5a74c86be50c28ceecd78e8c485800666ab2aa979f0d6c53f98ec686c77e0c783930e97326ff5528fde6029ee93'
- # ==> Controller configuration
+  # ==> Controller configuration
   # Configure the parent class to the devise controllers.
   config.parent_controller = 'TurboDeviseController'
-  
+
   # ...
 
   # ==> Navigation configuration
@@ -44,8 +44,8 @@ Devise.setup do |config|
   # ...
   config.warden do |manager|
     manager.failure_app = TurboFailureApp
-  #   manager.intercept_401 = false
-  #   manager.default_strategies(scope: :user).unshift :some_external_strategy
+    #   manager.intercept_401 = false
+    #   manager.default_strategies(scope: :user).unshift :some_external_strategy
   end
   # ==> Controller configuration
   # Configure the parent class to the devise controllers.
@@ -122,8 +122,6 @@ Devise.setup do |config|
   # to behave the same regardless if the e-mail provided was right or wrong.
   # Does not affect registerable.
   # config.paranoid = true
-
-
 
   # By default Devise will store the user in session. You can skip storage for
   # particular strategies by setting this option.
