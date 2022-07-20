@@ -50,6 +50,12 @@ $ bundle exec rspec
 - GitHub: [@sediqullahbadakhsh](https://github.com/sediqullahbadakhsh)
 - LinkedIn: [@sediqullah](https://www.linkedin.com/in/sediqullah/)
 
+👤 **J. Luis Arredondo**
+
+- GitHub: [@Retky](https://github.com/Retky "J. Luis Arredondo GitHub")
+- Twitter: [@RetkyFox](https://twitter.com/retkyFox "J. Luis Arredondo Twitter")
+- LinkedIn: [Retky](https://www.linkedin.com/in/Retky "J. Luis Arredondo LinkedIn")
+
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!

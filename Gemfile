@@ -64,19 +64,20 @@ group :development do
   # gem "spring"
 end
 
-group :test do
-  # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
-  gem 'capybara'
-  gem 'selenium-webdriver'
-  gem 'webdrivers'
-end
 # Rubocop version
 gem 'rubocop', '>= 1.0', '< 2.0'
 # RSpec-Rails
 group :development, :test do
+  gem 'capybara'
+  gem 'database_cleaner'
   gem 'rspec-rails'
+  gem 'selenium-webdriver'
 end
+
 # ffi
 gem 'ffi'
 # assert_template controller testing
 gem 'rails-controller-testing'
+
+# eager loading with Bullet
+gem 'bullet'
