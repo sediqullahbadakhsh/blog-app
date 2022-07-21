@@ -5,6 +5,7 @@ Rails.application.routes.draw do
     namespace 'v1' do
       get 'users/:user_id/posts' => 'api#user_posts'
       get 'users/:user_id/posts/:post_id' => 'api#user_comments'
+      post 'posts/:post_id/comment' => 'api#add_comment_to_post'
     end
   end
   devise_scope :user do
