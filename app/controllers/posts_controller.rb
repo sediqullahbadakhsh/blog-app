@@ -23,20 +23,15 @@ class PostsController < ApplicationController
       render 'new'
     end
   end
-  
-  def destroy
-    @post = Post.find(params[:post_id])
-    @user = User.find(params[:user_id])
-    @post.destroy
-    redirect_back(fallback_location: root_path)
-  end
 
-  def destroy_comment
-    @post = Post.find(params[:post_id])
-    @user = User.find(params[:user_id])
-    @comment = @post.comments.find(params[:format])
-    @comment.destroy
-    redirect_back(fallback_location: root_path)
+  def destroy
+    @post = Post.find(params[:id])
+    @post.destroy
+    respond_to do |format|
+      format.html { redirect_to user_posts_path, notice: "Post successfully Deleted." }
+      format.json { head :no_content }
+    end
+    # redirect_to user_posts_path
   end
 
   private
