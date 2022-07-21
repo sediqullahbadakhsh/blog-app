@@ -9,9 +9,9 @@ Rails.application.routes.draw do
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   root to: 'users#index'
-  resources :users, only: [:index, :show] do
-    resources :posts, only: [:index, :show, :new, :create] do
-      resources :comments, only: [:create]
+  resources :users, only: [:index, :show, :new, :create, :destroy] do
+    resources :posts do
+      resources :comments, only: [:new, :create, :destroy]
       resources :likes, only: [:create]
     end
   end
