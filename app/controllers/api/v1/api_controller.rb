@@ -1,9 +1,10 @@
 module Api
-    module v1
-        class ApiController < ApplicationController
-            def index
-                @posts = Posts.order('created_at DESC');
-                render json: {status:'SUCCESS', message: 'Loaded Posts', data:posts}, status:ok 
+    module V1
+         class ApiController < ApplicationController
+            def user_posts
+                user_id = params[:user_id]
+                posts = Post.where(user_id: user_id)
+                render json: {status: 'SUCCESS', message: 'Loaded Posts', data: posts}, status: :ok
             end
         end
     end
