@@ -87,3 +87,5 @@ gem 'bullet'
 gem 'devise'
 
 gem 'cancancan'
+
+gem 'jwt'
