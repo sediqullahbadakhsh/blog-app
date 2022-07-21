@@ -3,7 +3,7 @@
 Rails.application.routes.draw do
   namespace 'api' do
     namespace 'v1' do
-      resources :posts
+      get 'users/:user_id/posts' => 'api#user_posts'
     end
   end
   devise_scope :user do
