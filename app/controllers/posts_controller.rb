@@ -31,7 +31,6 @@ class PostsController < ApplicationController
       format.html { redirect_to user_posts_path, notice: "Post successfully Deleted." }
       format.json { head :no_content }
     end
-    # redirect_to user_posts_path
   end
 
   private
