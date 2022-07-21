@@ -22,7 +22,9 @@
     <div class="comment-section">
         <% @post.most_recent_comments.includes([:user]).each do |c|%>
             <p><%= c.user.name + ": " + c.text%></p>
-            <%= button_to "Remove", user_post_comment_path(current_user.id, @post.id, c.id), method: :delete, data: {turbo: false}%>
+            <% if can? :destroy, c %>
+                <%= button_to "Remove", user_post_comment_path(current_user.id, @post.id, c.id), method: :delete, data: {turbo: false}%>
+            <%end%>
         <%end%>
     </div>
 
