@@ -1,7 +1,7 @@
 module Api
     module V1
          class ApiController < ApplicationController
-            protect_from_forgery with: :null_session
+            before_action :require_login
             # skip_before_action :authenticate_user!
             def user_posts
                 user_id = params[:user_id]
@@ -16,7 +16,7 @@ module Api
             def add_comment_to_post
                 post_id = params[:post_id]
                 comment_text = params[:text]
-                comment = Comment.new(post_id: post_id, user: @current_user, text: comment_text)
+                comment = Comment.new(post_id: post_id, user_id: current_user_id, text: comment_text)
                 if comment.save
                     render json: {status: 'SUCCESS', message: 'Comment saved', data: comment}, status: :ok
                 else
