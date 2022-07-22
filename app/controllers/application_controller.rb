@@ -12,7 +12,7 @@ class ApplicationController < ActionController::Base
   end
 
   def current_user_id
-    decoded_token = JWT.decode(request.headers['Authorization'].split(' ').last, Rails.application.secrets.secret_key_base)
+    decoded_token = JWT.decode(request.headers['Authorization'].split.last, Rails.application.secrets.secret_key_base)
     decoded_token.first['user_id']
   rescue JWT::DecodeError
     nil

@@ -14,11 +14,13 @@ class Post < ApplicationRecord
 
   after_save :update_post_counter
   after_destroy :destroy_post_counter
+
   private
 
   def update_post_counter
     user.increment!(:posts_counter)
   end
+
   def destroy_post_counter
     user.decrement!(:posts_counter)
   end
