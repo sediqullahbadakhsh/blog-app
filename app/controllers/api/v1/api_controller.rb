@@ -1,8 +1,7 @@
 module Api
     module V1
          class ApiController < ApplicationController
-            before_action :require_login
-            # skip_before_action :authenticate_user!
+
             def user_posts
                 user_id = params[:user_id]
                 posts = Post.where(user_id: user_id)
