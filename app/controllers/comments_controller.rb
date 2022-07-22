@@ -1,4 +1,7 @@
 class CommentsController < ApplicationController
+  before_action :require_login
+  skip_before_action :verify_authenticity_token
+
   def new
     @comment = Comment.new
   end
@@ -20,8 +23,6 @@ class CommentsController < ApplicationController
     @comment.destroy
     redirect_back(fallback_location: root_path)
     flash[:notice]= "Comment successfully Deleted."
-
-
   end
 
 end
