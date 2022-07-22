@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
+  mount Rswag::Ui::Engine => '/api-docs'
+  mount Rswag::Api::Engine => '/api-docs'
   post '/login', to: 'authentication#login', default: {:format => :json}
   post '/signup', to: 'authentication#signup', default: {:format => :json}
 

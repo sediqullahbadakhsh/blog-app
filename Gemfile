@@ -91,3 +91,5 @@ gem 'cancancan'
 gem 'jwt'
 
 gem 'rack-cors'
+
+gem 'rswag'
