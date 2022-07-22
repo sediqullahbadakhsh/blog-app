@@ -1,6 +1,6 @@
 class Post < ApplicationRecord
-  has_many :likes
-  has_many :comments
+  has_many :likes, dependent: :destroy
+  has_many :comments, dependent: :destroy
   belongs_to :user
 
   validates :title, presence: true, length: { maximum: 250 }
@@ -13,10 +13,15 @@ class Post < ApplicationRecord
   end
 
   after_save :update_post_counter
+  after_destroy :destroy_post_counter
 
   private
 
   def update_post_counter
     user.increment!(:posts_counter)
+  end
+
+  def destroy_post_counter
+    user.decrement!(:posts_counter)
   end
 end

@@ -1,10 +1,6 @@
 require 'capybara/rspec'
 
 RSpec.configure do |config|
-  # if Bullet.enable?
-  #   config.before(:each) { Bullet.start_request }
-  #   config.after(:each)  { Bullet.end_request }
-  # end
   config.expect_with :rspec do |expectations|
     expectations.include_chain_clauses_in_custom_matcher_descriptions = true
   end
