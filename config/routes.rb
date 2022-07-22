@@ -1,6 +1,9 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
+  post '/login', to: 'authentication#login', default: {:format => :json}
+  post '/signup', to: 'authentication#signup', default: {:format => :json}
+
   namespace 'api' do
     namespace 'v1' do
       get 'users/:user_id/posts' => 'api#user_posts'
